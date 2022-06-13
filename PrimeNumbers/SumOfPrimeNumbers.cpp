@@ -2,25 +2,10 @@
 using namespace std;
 #define int long long
 
-vector<int>Factor;
-
-void Seive(){
-    int Max = 2e6+5;
-    Factor.resize(Max);
-    for(int i=1;i<Max;i++) Factor[i]=i;
-    for(int i=2;i<Max;i++){
-        if(Factor[i]==i){
-        	for(int j=i*i;j<Max;j+=i) Factor[j]=i;
-        }
-    }
-}
 
 int getSumOfPrimeFactors(int n){
     int ans=0;
-    while(Factor[n]!=1){
-        ans+=Factor[n];
-        n= n/Factor[n];
-    }
+    //COMPLETE THE FUNCTION
     return ans;
 }
 
