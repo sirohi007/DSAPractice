@@ -40,9 +40,14 @@ void recursion(vector<int> A,int i){
     }
 
     for(int j=1;j<=A.size();j++){
+    	cout<<"i: "<<i<<" j: "<<j<<" ";
         if(isTargertPreceding(A,j)){
+        	cout<<"as j is not present in array so changing A["<<i<<"] to "<<j<<"\n"; 
             A[i] = j;
             recursion(A,i+1);
+        }
+        else {
+        	cout<<"as j is present in Array So moving ahead\n";
         }
     }
 }
