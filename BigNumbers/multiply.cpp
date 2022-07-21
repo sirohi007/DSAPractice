@@ -42,7 +42,9 @@ string sum(string a, string b){
     //i=0 => ans = '9'+ans => ans= "990"
     
     if(carry>0){
-        ans= ans +toChar[carry];
+         string c = to_string(carry);
+        reverse(c.begin(),c.end());
+        ans=ans+c;
     }
     reverse(ans.begin(),ans.end());
    // cout<<"a: "<<a<<" b: "<<b<<" sum: "<<ans<<"\n"; 
